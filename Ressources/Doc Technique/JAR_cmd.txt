@@ -1,0 +1,1 @@
+jar cvmf MANIFEST_Path Nom_du_programme.jar *.class

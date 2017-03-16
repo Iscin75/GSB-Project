@@ -14,15 +14,15 @@ public class Controller {
 			FenPrincipale FA = new FenPrincipale();
 			
 			// New header
-			FA.setHeader(new Header(FA.couleur(66, 76, 88), "Authentification"));
+			FA.setHeader(new Header("Authentification"));
 			FA.header_content();
 			
 			//New footer
-			FA.setFooter(new Footer(FA.couleur(66, 76, 88)));
+			FA.setFooter(new Footer());
 			FA.footer_content();
 			
-			//New corp
-			FA.setCorps(new Corps());
+			//New corps
+			FA.setCorps(new Corps(FA));
 			FA.corps();
 			
 			//Parametre de notre fenetre

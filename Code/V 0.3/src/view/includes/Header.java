@@ -1,10 +1,13 @@
 package view.includes;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import java.awt.FlowLayout;
 
 public class Header extends JPanel {
 	/**
@@ -16,22 +19,23 @@ public class Header extends JPanel {
 	private String titre;
 	private Color header_footer_font;
 	
-	public Header(Color pheader_footer_font, String ptitre){
+	public Header(String ptitre){
 		
 		this.titre=ptitre;
-		this.header_footer_font= pheader_footer_font;
+	
 		init();
 	}
 	
 	private void init(){
 		
 		JPanel header = this;
-		header.setBackground(header_footer_font);
-		header.setBounds(0, 0, 394, 30);	
-		header.setLayout(null);
+		header.setBackground( new Color(66, 76, 88));
+		setLayout(new BorderLayout(0, 0));
 		
 		//----------/ Texte de l'entete
 		JLabel lbl_auth = new JLabel(titre);
+		lbl_auth.setVerticalAlignment(SwingConstants.TOP);
+		lbl_auth.setHorizontalAlignment(SwingConstants.RIGHT);
 		lbl_auth.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lbl_auth.setForeground(Color.WHITE);
 		lbl_auth.setBounds(249, 0, 185, 30);

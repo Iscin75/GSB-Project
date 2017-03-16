@@ -6,11 +6,13 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 
 public class Footer extends JPanel { 
 	private Color header_footer_font = new Color(66, 76, 88);
 	
-	public Footer(Color header_footer_font ){
+	public Footer( ){
 		init();
 	}
 	
@@ -18,16 +20,7 @@ public class Footer extends JPanel {
 		//----------/ Zone du bas de page
 		JPanel footer = this;
 		footer.setBackground(header_footer_font);
-		footer.setBounds(0, 344, 394, 15);
-		footer.setLayout(null);
-		
-		//----------/ Texte Gauche du bas de page
-		JLabel lbl_team = new JLabel("Diaby/Boudiaf/Moua/Siarri");
-		lbl_team.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lbl_team.setHorizontalAlignment(SwingConstants.LEFT);
-		lbl_team.setForeground(Color.WHITE);
-		lbl_team.setBounds(0, 0, 169, 14);
-		footer.add(lbl_team);
+		setLayout(new BorderLayout(0, 0));
 		
 		//----------/ Texte Droit du bas de page
 		JLabel lbl_date = new JLabel("GSB 2016/2017");
@@ -36,6 +29,14 @@ public class Footer extends JPanel {
 		lbl_date.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lbl_date.setBounds(307, 0, 87, 14);
 		footer.add(lbl_date);
+		
+		//----------/ Texte Gauche du bas de page
+		JLabel lbl_team = new JLabel("Diaby/Boudiaf/Moua/Siarri");
+		lbl_team.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lbl_team.setHorizontalAlignment(SwingConstants.LEFT);
+		lbl_team.setForeground(Color.WHITE);
+		lbl_team.setBounds(0, 0, 169, 14);
+		footer.add(lbl_team, BorderLayout.WEST);
 	}
 
 }
